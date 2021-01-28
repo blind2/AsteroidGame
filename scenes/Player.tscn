@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/space_ship2.png" type="Texture" id=1]
+[ext_resource path="res://scripts/player.gd" type="Script" id=2]
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 3.78665, 1.73812 )
+rotation = 1.5708
+scale = Vector2( 0.323355, 0.281041 )
+polygon = PoolVector2Array( 2.46964, -86.5414, 83.1575, 60.4887, -86.827, 57.8501, -86.139, 60.0674 )
+
+[node name="Canon" type="Position2D" parent="."]
+position = Vector2( 26.2995, 0.0645943 )
+
+[node name="space_ship2" type="Sprite" parent="."]
+position = Vector2( 1.61881, 1.04531 )
+rotation = 1.5708
+scale = Vector2( 0.158211, 0.123049 )
+texture = ExtResource( 1 )

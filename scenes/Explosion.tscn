@@ -1,0 +1,32 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://assets/Expolsion/tile005.png" type="Texture" id=7]
+[ext_resource path="res://assets/Expolsion/tile007.png" type="Texture" id=8]
+[ext_resource path="res://assets/Expolsion/tile013.png" type="Texture" id=9]
+[ext_resource path="res://assets/Expolsion/tile014.png" type="Texture" id=10]
+[ext_resource path="res://assets/Expolsion/tile015.png" type="Texture" id=11]
+[ext_resource path="res://assets/Expolsion/tile008.png" type="Texture" id=12]
+[ext_resource path="res://assets/Expolsion/tile010.png" type="Texture" id=13]
+[ext_resource path="res://assets/Expolsion/tile009.png" type="Texture" id=14]
+[ext_resource path="res://assets/Expolsion/tile011.png" type="Texture" id=15]
+[ext_resource path="res://assets/Expolsion/tile017.png" type="Texture" id=16]
+[ext_resource path="res://assets/Expolsion/tile019.png" type="Texture" id=17]
+[ext_resource path="res://assets/Expolsion/tile018.png" type="Texture" id=18]
+[ext_resource path="res://assets/Expolsion/tile012.png" type="Texture" id=19]
+[ext_resource path="res://assets/Expolsion/tile016.png" type="Texture" id=20]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 15 ), ExtResource( 19 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 20 ), ExtResource( 16 ), ExtResource( 18 ), ExtResource( 17 ) ],
+"loop": false,
+"name": "explosion_animation",
+"speed": 10.0
+} ]
+
+[node name="Explosion" type="AnimatedSprite"]
+position = Vector2( 0.0743523, 0.219067 )
+scale = Vector2( 2.20787, 1.65961 )
+frames = SubResource( 1 )
+animation = "explosion_animation"
+frame = 13
+playing = true

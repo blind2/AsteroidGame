@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/StatsMenu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/red_space.jpg" type="Texture" id=3]
+[ext_resource path="res://scripts/main.gd" type="Script" id=4]
+
+[node name="Main" type="Node2D"]
+position = Vector2( 0.655457, 5.35709 )
+script = ExtResource( 4 )
+
+[node name="red_space" type="Sprite" parent="."]
+position = Vector2( 499.262, 295.732 )
+scale = Vector2( 0.52515, 0.554327 )
+texture = ExtResource( 3 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 496.996, 339.043 )
+
+[node name="StatsMenu" parent="." instance=ExtResource( 2 )]
+margin_left = 0.344969
+margin_top = -7.90197
+margin_right = 0.344969
+margin_bottom = -7.90197
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="OvnisSpawnTimer" type="Timer" parent="."]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="OvnisSpawnTimer" to="." method="_on_OvnisSpawnTimer_timeout"]
